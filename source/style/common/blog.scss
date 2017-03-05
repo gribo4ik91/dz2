@@ -1,0 +1,54 @@
+.blog {
+  position: relative;
+}
+.blog-container {
+  @extend %clearfix;
+  padding: 70px 70px 0;
+  position: relative;
+
+  @include tablet {
+    padding: 50px 4%;
+  }
+}
+.sidebar {
+  width: 410px/1800px * 100%;
+  @extend %left;
+
+  @include tablet {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: $orange-light;
+      box-shadow: 0 0 3px 3px rgba(#000, .2);
+      border-radius: 50%;
+      position: absolute;
+      right: -15px;
+    }
+  }
+  @include phone {
+    width: 300px;
+    &:after {
+      right: -9px;
+    }
+  }
+}
+.articles {
+  width: 1310px/1800px * 100%;
+  @extend %right;
+
+  @include tablet {
+    width: 100%;
+  }
+}
+
+
+@import "blog/header";
+@import "blog/sidebar";
+@import "blog/articles";

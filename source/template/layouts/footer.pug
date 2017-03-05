@@ -1,0 +1,43 @@
+-
+   var menu = [
+      {
+      title: 'Мои работы',
+      link: 'works.html'
+      },
+      {
+      title: 'Обо мне',
+      link: 'about.html'
+      },
+      {
+         title: 'Блог',
+         link: 'blog.html'
+      },{
+         title: 'Авторизация',
+         link: 'index.html'
+         }
+      ]
+-
+   var socials = [
+   {
+      title: 'vk',
+      link: 'https://vk.com/gribo4ik'
+   },
+   {
+      title: 'github',
+      link: 'https://github.com/gribo4ik91'
+   },
+   {
+      title: 'in',
+      link: '#'
+   }
+   ]
+
+footer.footer
+   .footer__top
+      +nav('footer-menu', 'inline', menu)
+      +social-round(socials, 'round')
+   .footer__bottom
+      .footer__text
+         p.
+            Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+      +copy-right

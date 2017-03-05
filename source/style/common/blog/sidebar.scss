@@ -1,0 +1,24 @@
+.blog-menu {
+  text-align: right;
+}
+.blog-menu__item {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.blog-menu__link {
+  display: inline-block;
+  padding: 14px 17px;
+  border-right: 3px solid transparent;
+  text-decoration: none;
+  color: $gray;
+  &:hover {
+    border-right-color: $orange-light ;
+    color: $orange-light;
+  }
+  &_active {
+    border-right-color: $orange-light ;
+    color: $orange-light;
+  }
+}
