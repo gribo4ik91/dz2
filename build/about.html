@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/foundation.js" defer></script><!--[if lt IE 9]>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -39,7 +40,7 @@
                   <svg class="social__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
                   </svg></a></li>
-              <li class="social__item"><a class="social__link social__link_in" href="#" target="_blank">
+              <li class="social__item"><a class="social__link social__link_in" href="" target="_blank">
                   <svg class="social__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
                   </svg></a></li>
@@ -55,7 +56,7 @@
         <div class="header__user">
           <div class="user">
             <div class="user__avatar"><img class="avatar__pic" src="assets/img/userfiles/avatar.jpg"/></div>
-            <div class="user__name">Гриб Андрей</div>
+            <div class="user__name"> Гриб Андрей</div>
             <div class="user__desc">Личный сайт веб разработчика</div>
           </div>
         </div><a class="scroll-link scroll-link_down" href="#">
@@ -203,7 +204,9 @@
         </div>
       </section>
       <section class="l-contacts">
-        <div class="map" id="map"><img src="assets/img/userfiles/map.jpg"></div>
+        <div class="map" id="map">
+          <!--img(src="assets/img/userfiles/map.jpg")-->
+        </div>
         <div class="contacts">
           <div class="contacts__title block-title">контакты</div>
           <ul class="contacts__list">
@@ -211,7 +214,7 @@
                 <svg class="contacts__icon">
                   <use xlink:href="assets/img/sprite/sprite.svg#skype"></use>
                 </svg>
-                <div class="contacts__text">Гриб Андрей</div></a></li>
+                <div class="contacts__text">xxx._91</div></a></li>
             <li class="contacts__item"><a class="contacts__link" href="#" target="_blank">
                 <svg class="contacts__icon">
                   <use xlink:href="assets/img/sprite/sprite.svg#envelope"></use>
@@ -221,12 +224,12 @@
                 <svg class="contacts__icon">
                   <use xlink:href="assets/img/sprite/sprite.svg#phone"></use>
                 </svg>
-                <div class="contacts__text">8-999-999-9999</div></a></li>
-            <li class="contacts__item"><a class="contacts__link" href="#" target="_blank">
+                <div class="contacts__text">+373 76 72 999 99</div></a></li>
+            <li class="contacts__item"><a class="contacts__link" href="https://yandex.ru/maps/-/C6ACIV8K" target="_blank">
                 <svg class="contacts__icon">
                   <use xlink:href="assets/img/sprite/sprite.svg#map_marker"></use>
                 </svg>
-                <div class="contacts__text">Кишинев, ул. Деляну</div></a></li>
+                <div class="contacts__text">Молдова, ул. Л.Деляну</div></a></li>
           </ul>
         </div>
       </section>
@@ -267,6 +270,6 @@
         </div>
       </footer>
     </div>
-    <script src="assets/js/app.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6TzSxZEVxStaNZ6WOc4TJ23cy1biaR6E&amp;callback=initMap"></script>
   </body>
 </html>

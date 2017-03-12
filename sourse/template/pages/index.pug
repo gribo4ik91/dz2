@@ -1,0 +1,60 @@
+extends ../_template
+
+include ../_misc/mixin
+
+block variables
+	- var title = 'Welcome'
+	-
+		var socials = [
+		{
+		title: 'vk',
+		link: 'https://vk.com/gribo4ik'
+		},
+		{
+		title: 'github',
+		link: 'https://github.com/gribo4ik91'
+		},
+		{
+		title: 'in',
+		link: ''
+		}
+		]
+	-
+		var menu = [
+		{
+		title: 'Мои работы',
+		link: 'works.html'
+		},
+		{
+		title: 'Обо мне',
+		link: 'about.html'
+		},
+		{
+		title: 'Блог',
+		link: 'blog.html'
+		}
+		]
+
+block content
+	.preloader
+		.pleloader__content
+			.preloader__animation
+			.preloader__percent 0%
+	.index-wrapper
+		.welcome__background.desert
+			include ../common/welcome/desert
+		button.btn.auth-button(type="button") авторизоваться
+		.welcome-wrapper.flip-container
+			.flipper
+				include ../common/welcome/welcome
+				include ../common/welcome/login
+
+		.welcome__copyright
+			+copy-right('bold')
+
+		.welcome__error
+			.input-error-captcha
+				.input-error-captcha__close
+				.input-error-captcha__text Роботам тут не место
+
+block script

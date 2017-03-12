@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('assets', function() {
-    return $.gulp.src(['./source/assets/**/*.*', '!./source/assets/img/sprite/*.*'], { since: $.gulp.lastRun('assets') })
+    return $.gulp.src(['./sourse/assets/**/*.*', '!./sourse/assets/img/sprite/*.*'], { since: $.gulp.lastRun('assets') })
       .pipe($.gulp.dest($.config.root + '/assets/'));
   });
 };

@@ -11,13 +11,20 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/foundation.js" defer></script><!--[if lt IE 9]>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="wrapper">
+      <div class="preloader">
+        <div class="pleloader__content">
+          <div class="preloader__animation"></div>
+          <div class="preloader__percent">0%</div>
+        </div>
+      </div>
       <div class="index-wrapper">
-        <div class="welcome__background desert"></div>
+        <div class="welcome__background desert"><img class="background__pic" src="assets/img/decor/background.jpg" alt=""></div>
         <button class="btn auth-button" type="button">авторизоваться</button>
         <div class="welcome-wrapper flip-container">
           <div class="flipper">
@@ -25,7 +32,7 @@
               <div class="welcome__user">
                 <div class="user user_color_black">
                   <div class="user__avatar"><img class="avatar__pic" src="assets/img/userfiles/avatar.jpg"/></div>
-                  <div class="user__name">Гриб Андрей</div>
+                  <div class="user__name"> Гриб Андрей</div>
                   <div class="user__desc">Личный сайт веб разработчика</div>
                 </div>
               </div>
@@ -39,7 +46,7 @@
                       <svg class="social__icon">
                         <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
                       </svg></a></li>
-                  <li class="social__item"><a class="social__link social__link_in" href="#" target="_blank">
+                  <li class="social__item"><a class="social__link social__link_in" href="" target="_blank">
                       <svg class="social__icon">
                         <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
                       </svg></a></li>
@@ -58,23 +65,23 @@
                 <div class="block-title">авторизуйтесь</div>
               </div>
               <div class="auth__form">
-                <form class="auth-form" action="" method="">
+                <form action="" method="" id="auth-form">
                   <div class="form__container">
-                    <div class="auth-form__input input-group">
+                    <div class="input-group input-group_iconed">
+                      <input class="form-input" type="text" placeholder="Логин">
                       <div class="input-group__icon-field">
                         <svg class="input-group__icon">
                           <use xlink:href="assets/img/sprite/sprite.svg#login"></use>
                         </svg>
                       </div>
-                      <input class="form-input" type="text" placeholder="Логин">
                     </div>
-                    <div class="auth-form__input input-group">
+                    <div class="input-group input-group_iconed">
+                      <input class="form-input" type="password" placeholder="Пароль">
                       <div class="input-group__icon-field">
                         <svg class="input-group__icon">
                           <use xlink:href="assets/img/sprite/sprite.svg#password"></use>
                         </svg>
                       </div>
-                      <input class="form-input" type="password" placeholder="Пароль">
                     </div>
                     <div class="auth-form__checkbox">
                       <label class="checkbox">
@@ -86,19 +93,20 @@
                       <div class="radio-group__title">Вы точно человек?</div>
                       <div class="radio-group__inputs">
                         <label class="radio-btn">
-                          <input class="radio-btn__fake" type="radio" name="robot">
+                          <input class="radio-btn__fake" type="radio" name="robot" value="yes">
                           <div class="radio-btn__label">Да</div>
                         </label>
                         <label class="radio-btn">
-                          <input class="radio-btn__fake" type="radio" name="robot">
+                          <input class="radio-btn__fake" type="radio" name="robot" value="no">
                           <div class="radio-btn__label">Не уверен</div>
                         </label>
                       </div>
                     </div>
+                    <div class="input-error-msg"></div>
                   </div>
                   <div class="auth-form__buttons form__buttons">
                     <button class="form__btn btn-return" type="button">На главную</button>
-                    <button class="form__btn" type="button">Войти</button>
+                    <button class="form__btn" type="submit">Войти</button>
                   </div>
                 </form>
               </div>
@@ -112,8 +120,13 @@
             <li class="copy-right__item"><span class="copy-right__text">2017</span></li>
           </ul>
         </div>
+        <div class="welcome__error">
+          <div class="input-error-captcha">
+            <div class="input-error-captcha__close"></div>
+            <div class="input-error-captcha__text">Роботам тут не место</div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="assets/js/index.js"></script>
   </body>
 </html>

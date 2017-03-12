@@ -1,0 +1,36 @@
+-
+	contacts = [
+	{
+	title: 'xxx._91',
+	icon: 'skype',
+	link: '#'
+	},
+	{
+	title: 'gribo4ik@gmail.com',
+	icon: 'envelope',
+	link: '#'
+	},
+	{
+	title: '+373 76 72 999 99',
+	icon: 'phone',
+	link: '#'
+	},
+	{
+	title: 'Молдова, ул. Л.Деляну',
+	icon: 'map_marker',
+	link: 'https://yandex.ru/maps/-/C6ACIV8K'
+	}
+	]
+
+section.l-contacts
+	.map#map
+		//img(src="assets/img/userfiles/map.jpg")
+	.contacts
+		.contacts__title.block-title контакты
+		ul.contacts__list
+			each contact in contacts
+				li.contacts__item
+					a.contacts__link(href= contact.link target="_blank")
+						svg.contacts__icon
+							use(xlink:href=`assets/img/sprite/sprite.svg#${contact.icon}`)
+						.contacts__text= contact.title

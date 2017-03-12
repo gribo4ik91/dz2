@@ -11,7 +11,8 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="assets/js/foundation.js" defer></script><!--[if lt IE 9]>
+    <script src="assets/js/foundation.js" defer></script>
+    <script src="assets/js/app.js" defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -39,7 +40,7 @@
                   <svg class="social__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
                   </svg></a></li>
-              <li class="social__item"><a class="social__link social__link_in" href="#" target="_blank">
+              <li class="social__item"><a class="social__link social__link_in" href="" target="_blank">
                   <svg class="social__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
                   </svg></a></li>
@@ -55,7 +56,7 @@
         <div class="header__user">
           <div class="user">
             <div class="user__avatar"><img class="avatar__pic" src="assets/img/userfiles/avatar.jpg"/></div>
-            <div class="user__name">Гриб Андрей</div>
+            <div class="user__name"> Гриб Андрей</div>
             <div class="user__desc">Личный сайт веб разработчика</div>
           </div>
         </div><a class="scroll-link scroll-link_down" href="#">
@@ -71,28 +72,38 @@
           <div class="main-title main-title_undefined" style="background-image: url(assets/img/decor/works_header.png);">Мои работы</div>
         </div>
         <div class="portfolio__wrapper">
-          <div class="column column_left portfolio__column">
-            <div class="work__slider">
-              <div class="work__preview"><img class="work__pic" src="assets/img/userfiles/portfolio.png"></div>
-              <div class="work">
-                <div class="work__title block-title">Сайт школы онлайн</br>образования</div>
-                <div class="work__technology">html, css, javascript</div><a class="work__link" href="#">
+          <div class="column column_left portfolio__column portfolio__column_left">
+            <div class="work">
+              <div class="work__preview"><img class="work__pic" src=""></div>
+              <div class="work__desc">
+                <div class="work__title block-title"></div>
+                <div class="work__technology"></div><a class="work__link" href="#">
                   <svg class="work__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#link"></use>
                   </svg><span>Посмотреть сайт</span></a>
               </div>
             </div>
           </div>
-          <div class="column column_right portfolio__column">
-            <div class="work__toggle">
+          <div class="column column_right portfolio__column portfolio__column_right">
+            <div class="work__slider work-slider">
               <div class="work__prev toggle column column_left"><a class="toggle__link toggle__link_prev" href="#">
                   <svg class="toggle__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#portf_arrow_down"></use>
-                  </svg></a><img class="toggle__pic" src="assets/img/userfiles/portfolio.png"></div>
+                  </svg>
+                  <ul class="work-slider__list work-slider__list_prev">
+                    <li class="work-slider__item" data-title="Сайт №1" data-technology="html, css" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio1.png"></li>
+                    <li class="work-slider__item" data-title="Сайт №2" data-technology="html, css, javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio2.png"></li>
+                    <li class="work-slider__item" data-title="Сайт №3" data-technology="javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio3.png"></li>
+                  </ul></a></div>
               <div class="work__next toggle column column_right"><a class="toggle__link toggle__link_next" href="#">
                   <svg class="toggle__icon">
                     <use xlink:href="assets/img/sprite/sprite.svg#portf_arrow_up"></use>
-                  </svg></a><img class="toggle__pic" src="assets/img/userfiles/portfolio.png"></div>
+                  </svg>
+                  <ul class="work-slider__list work-slider__list_next">
+                    <li class="work-slider__item" data-title="Сайт №1" data-technology="html, css" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio1.png"></li>
+                    <li class="work-slider__item" data-title="Сайт №2" data-technology="html, css, javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio2.png"></li>
+                    <li class="work-slider__item" data-title="Сайт №3" data-technology="javascript" data-link="http://loftschool.ru"><img class="work-slider__img" src="assets/img/userfiles/portfolio3.png"></li>
+                  </ul></a></div>
             </div>
           </div>
         </div>
@@ -134,9 +145,16 @@
             <div class="block-title">Связаться со мной</div>
             <form class="form" action="" method="">
               <div class="form__container">
-                <input class="form-input" type="text" placeholder="Имя">
-                <input class="form-input" type="email" placeholder="Email">
-                <textarea class="form-input form-input_area" placeholder="Ваше сообщение"></textarea>
+                <div class="input-group">
+                  <input class="form-input" type="text" placeholder="Имя">
+                </div>
+                <div class="input-group">
+                  <input class="form-input" type="email" placeholder="Email">
+                </div>
+                <div class="input-group">
+                  <textarea class="form-input form-input_area" placeholder="Cообщение"></textarea>
+                </div>
+                <div class="input-error-msg"></div>
               </div>
               <div class="form__buttons">
                 <button class="form__btn" type="submit">Отправить</button>
@@ -186,6 +204,5 @@
         </div>
       </footer>
     </div>
-    <script src="assets/js/app.js"></script>
   </body>
 </html>
